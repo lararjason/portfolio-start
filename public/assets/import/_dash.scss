@@ -1,0 +1,12 @@
+main#dash {
+    input, textarea {
+        display: block;
+        margin: 0 0 10px;
+        min-width: 300px;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    textarea {
+        height: 300px;
+    }
+}

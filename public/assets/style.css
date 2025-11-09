@@ -44,4 +44,15 @@ main#install form {
 }
 main#install form .btn {
   display: block;
+}
+
+main#dash input, main#dash textarea {
+  display: block;
+  margin: 0 0 10px;
+  min-width: 300px;
+  padding: 5px;
+  border-radius: 5px;
+}
+main#dash textarea {
+  height: 300px;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,47 @@
+$second-color: #56006b;
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header, main {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer {
+    padding: 10px;
+    color: #eee;
+    background-color: $second-color;
+}
+
+.btn {
+    background-color: $second-color;
+}
+
+main {
+    flex: 1;
+    &#install {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        input, p {
+            margin: 5px 0;
+        }
+        form {
+            padding: 50px;
+            width: 70%;
+            border: 1px solid $second-color;
+            border-radius: 5px;
+            display: inline-block;
+            .btn {
+                display: block;
+            }
+        }
+    }
+}
