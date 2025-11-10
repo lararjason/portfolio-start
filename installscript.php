@@ -1,5 +1,13 @@
 <?php
-    $conn = mysqli_connect($_POST["host"], $_POST["dbuser"], $_POST["dbpass"]);
+
+function displayMsg($type, $string){
+    echo " <div class='alert alert-{$type}' role='alert'>
+                <p>{$string}</p>
+            </div>
+        ";
+}
+
+$conn = mysqli_connect($_POST["host"], $_POST["dbuser"], $_POST["dbpass"]);
     if(!$conn) {
         displayMsg("error", "Wrong passowrd for database");
         exit();
@@ -23,14 +31,14 @@
         displayMsg("success", "make tabels plz");
 
 
-        $sql = "CREATE TABLE project (
+        $sql = "CREATE TABLE projects (
             project_id INT AUTO_INCREMENT PRIMARY KEY,
-            namn VARCHAR(100) NOT NULL,
+            name VARCHAR(100) NOT NULL,
             info VARCHAR(500),
             external_link VARCHAR(100),
             thumbnail VARCHAR(100)
         );";
-        makeTabel($conn, $sql, "project");
+        makeTabel($conn, $sql, "projects");
 
 
         $sql = "CREATE TABLE images (
@@ -121,8 +129,8 @@
             VALUES (?, ?, ?, ?)
         ");
 
-        $name = "placeholder"
-        $info = "Lorem Ipsum"
+        $name = "placeholder";
+        $info = "Lorem Ipsum";
         $external_link = "";
         $thexternal_linkumbnail = "/assets/images/default.jpg";
 
