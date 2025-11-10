@@ -115,6 +115,25 @@
         } else {
             displayMsg("error", "Kunde inte lägga till användare");
         }
+
+        $stmt = $conn->prepare("
+            INSERT INTO projects (name, info, external_link, thumbnail)
+            VALUES (?, ?, ?, ?)
+        ");
+
+        $name = "placeholder"
+        $info = "Lorem Ipsum"
+        $external_link = "";
+        $thexternal_linkumbnail = "/assets/images/default.jpg";
+
+        $stmt->bind_param("ssss", $name, $info, $external_link, $external_link);
+
+        if ($stmt->execute()) {
+            displayMsg("success", "Dummyprojekt tillagd.");
+        } else {
+            displayMsg("error", "Kunde inte lägga till Dummyprojekt");
+        }
+        $stmt->close();
         makeEnv();
 
     }
