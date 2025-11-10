@@ -105,7 +105,7 @@
         ");
 
         $user = $_POST["admin"];
-        $pass = password_hash($_POST["admin"], PASSWORD_DEFAULT);
+        $pass = password_hash($_POST["password"], PASSWORD_DEFAULT);
         $role = "admin";
 
         $stmt->bind_param("sss", $user, $pass, $role);
