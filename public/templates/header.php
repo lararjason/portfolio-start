@@ -1,4 +1,6 @@
-<?php include("../../functions.php"); ?>
+<?php include(__DIR__ . "/../../conn.php"); ?>
+<?php include(__DIR__ . "/../../functions.php"); ?>
+<?php include(__DIR__ . "/../../defaultdata.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,5 +13,5 @@
 <body>
     
     <header>
-        <h1>Portfolio of portfolios</h1>
+        <h1><?php echo $sitename; ?></h1>
     </header>
